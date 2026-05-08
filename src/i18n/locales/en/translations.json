@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "dashboards": {
+      "dashboards": "Dashboards",
+      "home": "Início",
+      "users": "Usuários",
+      "products": "Produtos",
+      "agenda": "Agenda"
+    },
+    "settings": {
+      "settings": "Configurações",
+      "general": "Geral",
+      "appearance": "Aparência"
+    }
+  }
+}
