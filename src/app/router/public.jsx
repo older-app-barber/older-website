@@ -13,6 +13,12 @@ const publicRoutes = {
         Component: (await import("app/pages/public/PrivacyPolicy")).default,
       }),
     },
+    {
+      path: "exclusao-de-conta",
+      lazy: async () => ({
+        Component: (await import("app/pages/public/AccountDeletion")).default,
+      }),
+    },
   ],
 };
 
