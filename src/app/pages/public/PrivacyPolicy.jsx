@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
 
           {/* Intro */}
           <p className="text-sm leading-relaxed text-white/50">
-            A <strong className="text-white/70">Older Barber Shop</strong> ("nós", "nosso") respeita
+            A <strong className="text-white/70">Older Barber Shop</strong> (&ldquo;nós&rdquo;, &ldquo;nosso&rdquo;) respeita
             a privacidade dos seus usuários. Esta Política descreve quais dados coletamos, como
             utilizamos e quais são seus direitos, em conformidade com a Lei Geral de Proteção de
             Dados (LGPD — Lei nº 13.709/2018).
