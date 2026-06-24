@@ -1,7 +1,7 @@
 import {
   TbBrandInstagram,
   TbBrandWhatsapp,
-  TbBrandTiktok,
+  TbBrandGoogle,
   TbBrandGooglePlay,
   TbBrandApple,
 } from "react-icons/tb";
@@ -12,14 +12,34 @@ import logo from "assets/logos/logo_white.png";
 // ----------------------------------------------------------------------
 
 const socialLinks = [
-  { label: "Instagram", href: "#", Icon: TbBrandInstagram },
-  { label: "WhatsApp",  href: "#", Icon: TbBrandWhatsapp  },
-  { label: "TikTok",   href: "#", Icon: TbBrandTiktok    },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/older.barbershop?igsh=MXQ4bGliZDV4c2I=",
+    Icon: TbBrandInstagram,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/556181729313",
+    Icon: TbBrandWhatsapp,
+  },
+  {
+    label: "Google",
+    href: "https://share.google/l6xXg7rVLcFfCE6Cp",
+    Icon: TbBrandGoogle,
+  },
 ];
 
 const appLinks = [
-  { label: "Android", href: "#", Icon: TbBrandGooglePlay },
-  { label: "iOS",     href: "#", Icon: TbBrandApple      },
+  {
+    label: "Android",
+    href: "https://play.google.com/store/apps/details?id=com.bitcode.older",
+    Icon: TbBrandGooglePlay,
+  },
+  {
+    label: "iOS",
+    href: "https://apps.apple.com/br/app/id6739007879",
+    Icon: TbBrandApple,
+  },
 ];
 
 // Gold accent matching the logo's border color
@@ -30,7 +50,7 @@ export default function LinkTree() {
     <Page title="Links — Older Barber Shop">
       {/* Background with subtle warm glow from center */}
       <main
-        className="relative min-h-screen flex flex-col items-center justify-center px-5 py-16 overflow-hidden"
+        className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 py-16"
         style={{ background: "#080808" }}
       >
         {/* Radial glow */}
@@ -43,7 +63,7 @@ export default function LinkTree() {
           }}
         />
 
-        <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-sm">
+        <div className="relative z-10 flex w-full max-w-sm flex-col items-center gap-8">
           {/* Logo */}
           <img
             src={logo}
@@ -53,23 +73,47 @@ export default function LinkTree() {
           />
 
           {/* Ornamental divider */}
-          <div className="flex items-center gap-3 w-full">
-            <div className="flex-1 h-px" style={{ background: `linear-gradient(to right, transparent, ${GOLD}60)` }} />
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-              <rect x="7" y="0" width="7" height="7" transform="rotate(45 7 0)" fill={GOLD} opacity="0.7" />
+          <div className="flex w-full items-center gap-3">
+            <div
+              className="h-px flex-1"
+              style={{
+                background: `linear-gradient(to right, transparent, ${GOLD}60)`,
+              }}
+            />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden
+            >
+              <rect
+                x="7"
+                y="0"
+                width="7"
+                height="7"
+                transform="rotate(45 7 0)"
+                fill={GOLD}
+                opacity="0.7"
+              />
             </svg>
-            <div className="flex-1 h-px" style={{ background: `linear-gradient(to left, transparent, ${GOLD}60)` }} />
+            <div
+              className="h-px flex-1"
+              style={{
+                background: `linear-gradient(to left, transparent, ${GOLD}60)`,
+              }}
+            />
           </div>
 
           {/* Social links */}
-          <div className="flex flex-col gap-3 w-full">
+          <div className="flex w-full flex-col gap-3">
             {socialLinks.map(({ label, href, Icon }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 w-full rounded-xl px-5 py-4 text-sm font-medium text-white/90 transition-all duration-200"
+                className="group flex w-full items-center gap-4 rounded-xl px-5 py-4 text-sm font-medium text-white/90 transition-all duration-200"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.09)",
@@ -80,41 +124,52 @@ export default function LinkTree() {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = "rgba(255,255,255,0.04)";
-                  e.currentTarget.style.border = "1px solid rgba(255,255,255,0.09)";
+                  e.currentTarget.style.border =
+                    "1px solid rgba(255,255,255,0.09)";
                 }}
               >
                 <span
-                  className="flex items-center justify-center size-9 rounded-lg shrink-0 transition-colors duration-200"
+                  className="flex size-9 shrink-0 items-center justify-center rounded-lg transition-colors duration-200"
                   style={{ background: `${GOLD}20`, color: GOLD }}
                 >
                   <Icon className="size-5" />
                 </span>
                 <span className="flex-1">{label}</span>
-                <svg className="size-4 text-white/20 group-hover:text-white/40 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <svg
+                  className="size-4 text-white/20 transition-colors group-hover:text-white/40"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </a>
             ))}
           </div>
 
           {/* Section label */}
-          <div className="flex items-center gap-3 w-full">
-            <div className="flex-1 h-px bg-white/[0.06]" />
-            <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 font-medium">
+          <div className="flex w-full items-center gap-3">
+            <div className="h-px flex-1 bg-white/[0.06]" />
+            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/30">
               Baixar o app
             </span>
-            <div className="flex-1 h-px bg-white/[0.06]" />
+            <div className="h-px flex-1 bg-white/[0.06]" />
           </div>
 
           {/* App download */}
-          <div className="flex flex-col gap-3 w-full">
+          <div className="flex w-full flex-col gap-3">
             {appLinks.map(({ label, href, Icon }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 w-full rounded-xl px-5 py-4 text-sm font-medium transition-all duration-200"
+                className="group flex w-full items-center gap-4 rounded-xl px-5 py-4 text-sm font-medium transition-all duration-200"
                 style={{
                   background: "transparent",
                   border: `1px solid ${GOLD}40`,
@@ -130,21 +185,31 @@ export default function LinkTree() {
                 }}
               >
                 <span
-                  className="flex items-center justify-center size-9 rounded-lg shrink-0"
+                  className="flex size-9 shrink-0 items-center justify-center rounded-lg"
                   style={{ background: `${GOLD}15` }}
                 >
                   <Icon className="size-5" />
                 </span>
                 <span className="flex-1">{label}</span>
-                <svg className="size-4 opacity-40 group-hover:opacity-70 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <svg
+                  className="size-4 opacity-40 transition-opacity group-hover:opacity-70"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </a>
             ))}
           </div>
 
           {/* Footer */}
-          <p className="text-[11px] text-white/20 tracking-wide mt-2">
+          <p className="mt-2 text-[11px] tracking-wide text-white/20">
             © {new Date().getFullYear()} Older Barber Shop
           </p>
         </div>

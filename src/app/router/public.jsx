@@ -7,6 +7,12 @@ const publicRoutes = {
         Component: (await import("app/pages/public/LinkTree")).default,
       }),
     },
+    {
+      path: "politica-de-privacidade",
+      lazy: async () => ({
+        Component: (await import("app/pages/public/PrivacyPolicy")).default,
+      }),
+    },
   ],
 };
 
