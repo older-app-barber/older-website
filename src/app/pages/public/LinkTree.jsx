@@ -4,6 +4,7 @@ import {
   TbBrandGoogle,
   TbBrandGooglePlay,
   TbBrandApple,
+  TbQrcode,
 } from "react-icons/tb";
 
 import { Page } from "components/shared/Page";
@@ -151,6 +152,42 @@ export default function LinkTree() {
               </a>
             ))}
           </div>
+
+          {/* Pix */}
+          <a
+            href="/pix"
+            className="group flex w-full items-center gap-4 rounded-xl px-5 py-4 text-sm font-medium transition-all duration-200"
+            style={{
+              background: "rgba(184,146,46,0.08)",
+              border: `1px solid ${GOLD}40`,
+              color: GOLD,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(184,146,46,0.15)";
+              e.currentTarget.style.border = `1px solid ${GOLD}80`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "rgba(184,146,46,0.08)";
+              e.currentTarget.style.border = `1px solid ${GOLD}40`;
+            }}
+          >
+            <span
+              className="flex size-9 shrink-0 items-center justify-center rounded-lg"
+              style={{ background: `${GOLD}20` }}
+            >
+              <TbQrcode className="size-5" />
+            </span>
+            <span className="flex-1">Pix 💈</span>
+            <svg
+              className="size-4 opacity-40 transition-opacity group-hover:opacity-70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
 
           {/* Section label */}
           <div className="flex w-full items-center gap-3">
